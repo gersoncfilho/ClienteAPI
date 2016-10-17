@@ -35,6 +35,7 @@ namespace ClienteAPI.Controllers
             return Ok(payment);
         }
 
+
         // PUT: api/Payments/5
         [ResponseType(typeof(void))]
         public IHttpActionResult PutPayment(int id, Payment payment)
@@ -97,6 +98,30 @@ namespace ClienteAPI.Controllers
 
             db.Payments.Remove(payment);
             db.SaveChanges();
+
+            return Ok(payment);
+        }
+
+        // DELETE: api/Payments/5
+        [Route("api/Payments/reference")]
+        [ResponseType(typeof(Payment))]
+        public IHttpActionResult DeletePayment(string idPayment)
+        {
+            Payment payment;
+            try
+            {
+                payment = db.Payments.Single(x => x.Reference == idPayment);
+                db.Payments.Remove(payment);
+                db.SaveChanges();
+
+            }
+            
+            catch (Exception ex)
+            {
+                return NotFound();
+            }
+
+
 
             return Ok(payment);
         }
