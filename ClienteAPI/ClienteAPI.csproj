@@ -209,21 +209,14 @@
     <Compile Include="Controllers\ClientesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PaymentsController.cs" />
+    <Compile Include="Controllers\UserASPsController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201610011151594_update_models.cs" />
-    <Compile Include="Migrations\201610011151594_update_models.Designer.cs">
-      <DependentUpon>201610011151594_update_models.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201610121747010_change_field_payment_date.cs" />
-    <Compile Include="Migrations\201610121747010_change_field_payment_date.Designer.cs">
-      <DependentUpon>201610121747010_change_field_payment_date.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201610130153054_change_payment_field_sender.cs" />
-    <Compile Include="Migrations\201610130153054_change_payment_field_sender.Designer.cs">
-      <DependentUpon>201610130153054_change_payment_field_sender.cs</DependentUpon>
+    <Compile Include="Migrations\201707161342176_addtablesASP.cs" />
+    <Compile Include="Migrations\201707161342176_addtablesASP.Designer.cs">
+      <DependentUpon>201707161342176_addtablesASP.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
@@ -232,8 +225,11 @@
     <Compile Include="Models\ClienteContext.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Payment.cs" />
+    <Compile Include="Models\ProfileASP.cs" />
     <Compile Include="Models\Sender.cs" />
     <Compile Include="Models\User.cs" />
+    <Compile Include="Models\UserASP.cs" />
+    <Compile Include="Models\VideoASP.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
     <Compile Include="Results\ChallengeResult.cs" />
@@ -268,6 +264,7 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
     <None Include="Properties\PublishProfiles\apis.gersondeveloper.com - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
     <None Include="Properties\PublishProfiles\Umbler.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -308,14 +305,8 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201610011151594_update_models.resx">
-      <DependentUpon>201610011151594_update_models.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201610121747010_change_field_payment_date.resx">
-      <DependentUpon>201610121747010_change_field_payment_date.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201610130153054_change_payment_field_sender.resx">
-      <DependentUpon>201610130153054_change_payment_field_sender.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201707161342176_addtablesASP.resx">
+      <DependentUpon>201707161342176_addtablesASP.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

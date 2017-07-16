@@ -7,13 +7,13 @@ namespace ClienteAPI.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class change_field_payment_date : IMigrationMetadata
+    public sealed partial class addtablesASP : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(change_field_payment_date));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(addtablesASP));
         
         string IMigrationMetadata.Id
         {
-            get { return "201610121747010_change_field_payment_date"; }
+            get { return "201707161342176_addtablesASP"; }
         }
         
         string IMigrationMetadata.Source

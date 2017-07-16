@@ -18,6 +18,11 @@ namespace ClienteAPI.Models
         public DbSet<User> Users { get; set; }
         public DbSet<Payment> Payments { get; set; }
 
+        public DbSet<UserASP> UsersASP { get; set; }
+        public DbSet<ProfileASP> ProfilesASP { get; set; }
+        public DbSet<VideoASP> VideosASP { get; set; }
+
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             //Retira a pluralização quando o entity for criar o nome da tabela
