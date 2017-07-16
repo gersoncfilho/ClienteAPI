@@ -22,6 +22,25 @@ namespace ClienteAPI.Controllers
             return db.UsersASP;
         }
 
+        [ResponseType(typeof(UserASP))]
+        [Route("api/UsersASP/login")]
+        public IHttpActionResult DoLogin(string username, string password)
+        {
+            UserASP user;
+            try
+            {
+                user = db.UsersASP.Single(correctUser => (correctUser.Username == username && correctUser.Password == password));
+            }
+            catch (Exception ex)
+            {
+                return NotFound();
+            }
+
+
+
+            return Ok(user);
+        }
+
         // GET: api/UserASPs/5
         [ResponseType(typeof(UserASP))]
         public IHttpActionResult GetUserASP(int id)
