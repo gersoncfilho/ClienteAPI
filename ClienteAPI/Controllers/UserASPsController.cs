@@ -12,21 +12,21 @@ using ClienteAPI.Models;
 
 namespace ClienteAPI.Controllers
 {
-    public class UserASPsController : ApiController
+    public class UserAspsController : ApiController
     {
         private ClienteContext db = new ClienteContext();
 
-        // GET: api/UserASPs
-        public IQueryable<UserASP> GetUsersASP()
+        // GET: api/UserAsps
+        public IQueryable<UserAsp> GetUsersASP()
         {
             return db.UsersASP;
         }
 
-        [ResponseType(typeof(UserASP))]
+        [ResponseType(typeof(UserAsp))]
         [Route("api/UsersASP/login")]
         public IHttpActionResult DoLogin(string username, string password)
         {
-            UserASP user;
+            UserAsp user;
             try
             {
                 user = db.UsersASP.Single(correctUser => (correctUser.Username == username && correctUser.Password == password));
@@ -41,34 +41,34 @@ namespace ClienteAPI.Controllers
             return Ok(user);
         }
 
-        // GET: api/UserASPs/5
-        [ResponseType(typeof(UserASP))]
-        public IHttpActionResult GetUserASP(int id)
+        // GET: api/UserAsps/5
+        [ResponseType(typeof(UserAsp))]
+        public IHttpActionResult GetUserAsp(int id)
         {
-            UserASP userASP = db.UsersASP.Find(id);
-            if (userASP == null)
+            UserAsp UserAsp = db.UsersASP.Find(id);
+            if (UserAsp == null)
             {
                 return NotFound();
             }
 
-            return Ok(userASP);
+            return Ok(UserAsp);
         }
 
-        // PUT: api/UserASPs/5
+        // PUT: api/UserAsps/5
         [ResponseType(typeof(void))]
-        public IHttpActionResult PutUserASP(int id, UserASP userASP)
+        public IHttpActionResult PutUserAsp(int id, UserAsp UserAsp)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            if (id != userASP.IdUser)
+            if (id != UserAsp.IdUser)
             {
                 return BadRequest();
             }
 
-            db.Entry(userASP).State = EntityState.Modified;
+            db.Entry(UserAsp).State = EntityState.Modified;
 
             try
             {
@@ -76,7 +76,7 @@ namespace ClienteAPI.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!UserASPExists(id))
+                if (!UserAspExists(id))
                 {
                     return NotFound();
                 }
@@ -89,35 +89,35 @@ namespace ClienteAPI.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        // POST: api/UserASPs
-        [ResponseType(typeof(UserASP))]
-        public IHttpActionResult PostUserASP(UserASP userASP)
+        // POST: api/UserAsps
+        [ResponseType(typeof(UserAsp))]
+        public IHttpActionResult PostUserAsp(UserAsp UserAsp)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            db.UsersASP.Add(userASP);
+            db.UsersASP.Add(UserAsp);
             db.SaveChanges();
 
-            return CreatedAtRoute("DefaultApi", new { id = userASP.IdUser }, userASP);
+            return CreatedAtRoute("DefaultApi", new { id = UserAsp.IdUser }, UserAsp);
         }
 
-        // DELETE: api/UserASPs/5
-        [ResponseType(typeof(UserASP))]
-        public IHttpActionResult DeleteUserASP(int id)
+        // DELETE: api/UserAsps/5
+        [ResponseType(typeof(UserAsp))]
+        public IHttpActionResult DeleteUserAsp(int id)
         {
-            UserASP userASP = db.UsersASP.Find(id);
-            if (userASP == null)
+            UserAsp UserAsp = db.UsersASP.Find(id);
+            if (UserAsp == null)
             {
                 return NotFound();
             }
 
-            db.UsersASP.Remove(userASP);
+            db.UsersASP.Remove(UserAsp);
             db.SaveChanges();
 
-            return Ok(userASP);
+            return Ok(UserAsp);
         }
 
         protected override void Dispose(bool disposing)
@@ -129,7 +129,7 @@ namespace ClienteAPI.Controllers
             base.Dispose(disposing);
         }
 
-        private bool UserASPExists(int id)
+        private bool UserAspExists(int id)
         {
             return db.UsersASP.Count(e => e.IdUser == id) > 0;
         }

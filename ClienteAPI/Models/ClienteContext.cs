@@ -18,7 +18,7 @@ namespace ClienteAPI.Models
         public DbSet<User> Users { get; set; }
         public DbSet<Payment> Payments { get; set; }
 
-        public DbSet<UserASP> UsersASP { get; set; }
+        public DbSet<UserAsp> UsersASP { get; set; }
         public DbSet<ProfileASP> ProfilesASP { get; set; }
         public DbSet<VideoASP> VideosASP { get; set; }
 

@@ -7,13 +7,13 @@ namespace ClienteAPI.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class addtablesASP : IMigrationMetadata
+    public sealed partial class firstcommit : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(addtablesASP));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(firstcommit));
         
         string IMigrationMetadata.Id
         {
-            get { return "201707161342176_addtablesASP"; }
+            get { return "201707291009034_first-commit"; }
         }
         
         string IMigrationMetadata.Source

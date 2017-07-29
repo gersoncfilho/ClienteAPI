@@ -7,8 +7,11 @@ using System.Web;
 
 namespace ClienteAPI.Models
 {
-    [Table("UserASP")]
-    public class UserASP
+    /// <summary>
+    /// Tabela usuarios Seu Paulo Protetor
+    /// </summary>
+    [Table("UsersASP")]
+    public class UserAsp
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

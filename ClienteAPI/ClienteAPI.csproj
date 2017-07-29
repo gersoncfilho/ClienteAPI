@@ -221,9 +221,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201707161342176_addtablesASP.cs" />
-    <Compile Include="Migrations\201707161342176_addtablesASP.Designer.cs">
-      <DependentUpon>201707161342176_addtablesASP.cs</DependentUpon>
+    <Compile Include="Migrations\201707291009034_first-commit.cs" />
+    <Compile Include="Migrations\201707291009034_first-commit.Designer.cs">
+      <DependentUpon>201707291009034_first-commit.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
@@ -328,8 +328,8 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201707161342176_addtablesASP.resx">
-      <DependentUpon>201707161342176_addtablesASP.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201707291009034_first-commit.resx">
+      <DependentUpon>201707291009034_first-commit.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
