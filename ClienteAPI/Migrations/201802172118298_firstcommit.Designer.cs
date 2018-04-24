@@ -13,7 +13,7 @@ namespace ClienteAPI.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201707291009034_first-commit"; }
+            get { return "201802172118298_firstcommit"; }
         }
         
         string IMigrationMetadata.Source

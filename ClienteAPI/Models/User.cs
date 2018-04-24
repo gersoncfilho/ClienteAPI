@@ -4,10 +4,13 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
+using ClienteAPI.Models.Validations;
+using FluentValidation.Attributes;
 
 namespace ClienteAPI.Models
 {
     [Table("Users")]
+    [Validator(typeof(UserModelValidator))]
     public class User
     {
         [Key]
@@ -31,5 +34,8 @@ namespace ClienteAPI.Models
 
         [MaxLength(50), Required]
         public string Phone { get; set; }
+
+        [Required]
+        public DateTime BirthDate { get; set; }
     }
 }

@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2027
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClienteAPI", "ClienteAPI\ClienteAPI.csproj", "{03123753-19CB-4AF2-BA0F-F2369E336DC0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClienteAPI.Tests", "ClienteAPI.Tests\ClienteAPI.Tests.csproj", "{BDB13E47-6CF3-422D-A014-988DAE62E3DE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,8 +17,15 @@ Global
 		{03123753-19CB-4AF2-BA0F-F2369E336DC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{03123753-19CB-4AF2-BA0F-F2369E336DC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{03123753-19CB-4AF2-BA0F-F2369E336DC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDB13E47-6CF3-422D-A014-988DAE62E3DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDB13E47-6CF3-422D-A014-988DAE62E3DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDB13E47-6CF3-422D-A014-988DAE62E3DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDB13E47-6CF3-422D-A014-988DAE62E3DE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3E23D6AC-DD46-44A0-9E94-B20E423211BF}
 	EndGlobalSection
 EndGlobal

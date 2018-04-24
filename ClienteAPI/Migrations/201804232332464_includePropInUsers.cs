@@ -3,16 +3,16 @@ namespace ClienteAPI.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class firstcommit : DbMigration
+    public partial class includePropInUsers : DbMigration
     {
         public override void Up()
         {
-            RenameTable(name: "dbo.UserASP", newName: "UsersASP");
+            AddColumn("dbo.Users", "BirthDate", c => c.DateTime(nullable: false));
         }
         
         public override void Down()
         {
-            RenameTable(name: "dbo.UsersASP", newName: "UserASP");
+            DropColumn("dbo.Users", "BirthDate");
         }
     }
 }

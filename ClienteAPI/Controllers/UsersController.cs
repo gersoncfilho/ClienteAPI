@@ -55,6 +55,7 @@ namespace ClienteAPI.Controllers
         }
 
         // PUT: api/Users/5
+        [HttpPut]
         [ResponseType(typeof(void))]
         public IHttpActionResult PutUser(int id, User user)
         {
@@ -91,6 +92,7 @@ namespace ClienteAPI.Controllers
 
         // POST: api/Users
         [ResponseType(typeof(User))]
+        [HttpPost]
         public IHttpActionResult PostUser(User user)
         {
             if (!ModelState.IsValid)
